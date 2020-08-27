@@ -5,6 +5,7 @@ import Contact from './components/contact/Contact'
 import {Route} from 'react-router-dom'
 import Navigation from './components/navigation/Navigation'
 import {Switch} from 'react-router-dom'
+import Jeopardy from './components/Jeopardy'
 import './App.css'
 
 const errorPage = () =>{
@@ -23,6 +24,7 @@ function App() {
       render = {(props)=> <Welcome {...props}name = 'Adam'/>}/>
       <Route path = '/clock' component = {Clock}/>
       <Route path = '/contact' component = {Contact}/>
+      <Route path = '/jeopardy' component = {Jeopardy}/>
       <Route component = {errorPage}/>
       </Switch>
       <Navigation/>
