@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 //import our service
-import JeopardyService from "../jeopardyService";
+import JeopardyService from "../../jeopardyService";
+import Display from '../display/Display'
 class Jeopardy extends Component {
   //set our initial state and set up our service as this.client on this component
   constructor(props) {
@@ -8,9 +9,9 @@ class Jeopardy extends Component {
     this.client = new JeopardyService();
     this.state = {
       data: { category: {} },
-      formData: {
+      formData: {  
         answer: "",
-      },
+    },
       score: 0,
     };
   }
@@ -36,42 +37,25 @@ class Jeopardy extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     if (this.state.formData.answer === this.state.data.answer) {
-      return this.setState({
+       this.setState({
         score: this.state.score + this.state.data.value,
       });
     } else {
-      return this.setState({
+       this.setState({
         score: this.state.score - this.state.data.value,
       });
     }
+    this.getNewQuestion()
   };
+
+  
   render() {
-    return (
-      <div>
-        <strong>Question: </strong>
-        {this.state.data.question}
-        <br />
-        <strong>Points: </strong>
-        {this.state.data.value}
-        <br />
-        <strong>Category: </strong>
-        {this.state.data.category.title}
-        <br />
-        <form onSubmit={this.handleSubmit}>
-          <label>Answer: </label>
-          <input
-            onChange={this.handleChange}
-            type="text"
-            name="answer"
-            value={this.state.formData.answer}
-          />
-          <br/>
-          <button>Submit</button>
-          <br />
-        </form>
-        <h3>Score: {this.state.score}</h3>
-      </div>
-    );
+    return(
+      <Display />
+    )
+   
+   
+    
   }
 }
 export default Jeopardy;
