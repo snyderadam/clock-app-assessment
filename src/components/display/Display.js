@@ -1,5 +1,5 @@
 import React from "react";
-import Jeopardy from "../jeopardy/Jeopardy";
+
 
 function Display(props) {
   return (
