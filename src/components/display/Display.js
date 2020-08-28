@@ -11,7 +11,7 @@ function Display(props) {
       {props.value}
       <br />
       <strong>Category: </strong>
-      {props.title}
+      {props.category}
       <br />
       <form onSubmit={props.handleSubmit}>
         <label>Answer: </label>

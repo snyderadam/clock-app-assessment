@@ -50,7 +50,15 @@ class Jeopardy extends Component {
   
   render() {
     return(
-      <Display />
+      <Display 
+        question = {this.state.data.question}
+        value = {this.state.data.value}
+        category = {this.state.data.category.title}
+        score = {this.state.score}
+        handleSubmit = {this.handleSubmit}
+        onChange = {this.handleChange}
+        
+      />
     )
    
    

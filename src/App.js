@@ -5,7 +5,7 @@ import Contact from './components/contact/Contact'
 import {Route} from 'react-router-dom'
 import Navigation from './components/navigation/Navigation'
 import {Switch} from 'react-router-dom'
-import Jeopardy from './components/Jeopardy'
+import Jeopardy from './components/jeopardy/Jeopardy'
 import './App.css'
 
 const errorPage = () =>{
