@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-//import our service
 import JeopardyService from "../../jeopardyService";
 import Display from '../display/Display'
 class Jeopardy extends Component {
